@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph.xml"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.mycompany.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.mycompany.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_editProfileFragment"
+            app:destination="@id/editProfileFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_performanceFragment"
+            app:destination="@id/performanceFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_voteListFragment"
+            app:destination="@id/voteListFragment" />
+        <argument
+            android:name="editId"
+            app:argType="integer"
+            android:defaultValue="-1" />
+        <argument
+            android:name="commingFrom"
+            app:argType="integer"
+            android:defaultValue="-1" />
+    </fragment>
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.example.mycompany.EditProfileFragment"
+        android:label="fragment_edit_profile"
+        tools:layout="@layout/fragment_edit_profile" >
+        <action
+            android:id="@+id/action_editProfileFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_editProfileFragment_to_performanceFragment"
+            app:destination="@id/performanceFragment" />
+        <action
+            android:id="@+id/action_editProfileFragment_to_voteListFragment"
+            app:destination="@id/voteListFragment" />
+        <argument
+            android:name="editId"
+            app:argType="integer"
+            android:defaultValue="-1" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/performanceFragment"
+        android:name="com.example.mycompany.PerformanceFragment"
+        android:label="fragment_performance"
+        tools:layout="@layout/fragment_performance" >
+        <action
+            android:id="@+id/action_performanceFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_performanceFragment_to_voteListFragment"
+            app:destination="@id/voteListFragment" />
+        <argument
+            android:name="editId"
+            app:argType="integer"
+            android:defaultValue="-1" />
+    </fragment>
+    <fragment
+        android:id="@+id/voteListFragment"
+        android:name="com.example.mycompany.VoteListFragment"
+        android:label="fragment_vote_list"
+        tools:layout="@layout/fragment_vote_list" >
+        <action
+            android:id="@+id/action_voteListFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_voteListFragment_to_performanceFragment"
+            app:destination="@id/performanceFragment" />
+        <action
+            android:id="@+id/action_voteListFragment_to_voteFragment"
+            app:destination="@id/voteFragment" />
+        <argument
+            android:name="editId"
+            app:argType="integer"
+            android:defaultValue="-1" />
+    </fragment>
+    <fragment
+        android:id="@+id/voteFragment"
+        android:name="com.example.mycompany.VoteFragment"
+        android:label="fragment_vote"
+        tools:layout="@layout/fragment_vote" >
+        <action
+            android:id="@+id/action_voteFragment_to_voteListFragment"
+            app:destination="@id/voteListFragment" />
+        <action
+            android:id="@+id/action_voteFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_voteFragment_to_performanceFragment"
+            app:destination="@id/performanceFragment" />
+        <argument
+            android:name="editId"
+            app:argType="integer"
+            android:defaultValue="-1" />
+        <argument
+            android:name="voteId"
+            app:argType="integer"
+            android:defaultValue="-1" />
+    </fragment>
+</navigation>

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Title"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileFragment">
+
+    <Button
+        android:id="@+id/Vote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vote"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/Performance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Performance"
+        app:layout_constraintEnd_toStartOf="@+id/Profile"
+        app:layout_constraintStart_toEndOf="@+id/Vote"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/Profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Profile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/userphoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Performance"
+        app:layout_constraintBottom_toTopOf="@+id/name"
+        tools:src="@tools:sample/avatars" />
+
+    <Button
+        android:id="@+id/Edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Profile"
+        app:layout_constraintBottom_toTopOf="@+id/name"
+        />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name Surname"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userphoto"
+        app:layout_constraintBottom_toTopOf="@+id/title"/>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Title"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name"
+        app:layout_constraintBottom_toTopOf="@+id/GeneralPerformance"/>
+
+    <TextView
+        android:id="@+id/GeneralPerformance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="General Performance"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:layout_constraintBottom_toTopOf="@+id/success"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/success"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Project Success"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="40dp"
+        app:layout_constraintTop_toBottomOf="@+id/GeneralPerformance"
+        app:layout_constraintBottom_toTopOf="@+id/teamwork"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/successRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="%84"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/success"
+        app:layout_constraintTop_toBottomOf="@+id/GeneralPerformance"
+        app:layout_constraintBottom_toTopOf="@+id/teamwork"
+        tools:ignore="MissingConstraints" />
+    <TextView
+        android:id="@+id/teamwork"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Team Work"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="40dp"
+        app:layout_constraintTop_toBottomOf="@+id/success"
+        app:layout_constraintBottom_toTopOf="@+id/codding"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/teamworkRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="%84"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/success"
+        app:layout_constraintTop_toBottomOf="@+id/success"
+        app:layout_constraintBottom_toTopOf="@+id/codding"
+        tools:ignore="MissingConstraints" />
+    <TextView
+        android:id="@+id/codding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Codding Skill"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerViewProfile"
+        app:layout_constraintTop_toBottomOf="@+id/teamwork"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/coddingRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="%84"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/success"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerViewProfile"
+        app:layout_constraintTop_toBottomOf="@+id/teamwork"
+        tools:ignore="MissingConstraints" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewProfile"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        app:layout_constraintBottom_toTopOf="@id/commentsText"
+        app:layout_constraintTop_toBottomOf="@+id/teamwork"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+    <TextView
+        android:id="@+id/commentsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerViewProfile"
+        tools:ignore="MissingConstraints" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
